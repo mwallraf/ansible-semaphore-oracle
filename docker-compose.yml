@@ -38,3 +38,9 @@ services:
     depends_on:
       - semaphore-mysql
 
+networks:
+  default:
+    name: ansible_semaphore
+    ipam:
+      config:
+        - subnet: 198.51.102.100/24
