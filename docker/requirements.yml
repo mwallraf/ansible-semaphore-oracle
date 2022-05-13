@@ -1,0 +1,8 @@
+---
+collections:
+    - ansible.netcommon
+    - ari_stark.ansible_oracle_modules
+    - community.network
+    - cisco.ios
+    - cisco.iosxr
+    - clay584.genie
