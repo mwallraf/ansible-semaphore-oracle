@@ -17,8 +17,8 @@ services:
     build:
         context: ./docker
         args:
-          http_proxy: http://192.168.84.11:81
-          https_proxy: http://192.168.84.11:81
+          http_proxy: ${http_proxy:-}
+          https_proxy: ${http_proxy:-}
     ports:
       - 3100:3000
     image: mwallraf/ansiblesemaphore-oracle:1.0
@@ -35,6 +35,8 @@ services:
       SEMAPHORE_ADMIN_EMAIL: admin@localhost
       SEMAPHORE_ADMIN: admin
       SEMAPHORE_ACCESS_KEY_ENCRYPTION: gs72mPntFATGJs9qK0pQ0rKtfidlexiMjYCH9gWKhTU=
+      http_proxy: ${http_proxy:-}
+      https_proxy: ${http_proxy:-}
     depends_on:
       - semaphore-mysql
 
