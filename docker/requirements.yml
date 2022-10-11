@@ -6,3 +6,4 @@ collections:
     - cisco.ios
     - cisco.iosxr
     - clay584.genie
+    - community.docker
