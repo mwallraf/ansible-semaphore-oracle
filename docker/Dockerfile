@@ -19,6 +19,10 @@ RUN mkdir -p /lib/oracle/11.2/client64/lib && \
 RUN ln -s /lib/oracle/11.2/client64/lib/libclntsh.so.11.1 /lib/oracle/11.2/client64/lib/libclntsh.so
 RUN ln -s /usr/lib/libnsl.so.2.0.1 /lib/libnsl.so.1
 
+RUN pip3 install --upgrade pip
+RUN pip3 uninstall ansible-base
+RUN pip3 install --upgrade ansible
+
 COPY requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt
 RUN rm /tmp/requirements.txt
