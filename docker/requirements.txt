@@ -4,3 +4,4 @@ jsonschema
 docker
 ansible-core==2.13.4; python_version >= "3.8"
 ansible==6.4.0; python_version >= "3.8"
+mysqlclient
