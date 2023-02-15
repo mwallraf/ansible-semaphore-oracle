@@ -7,3 +7,4 @@ collections:
     - cisco.iosxr
     - clay584.genie
     - community.docker
+    - community.mysql
